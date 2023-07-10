@@ -7,7 +7,7 @@ class Solution:
 
         for n in nums:
             count[n] = 1 + count.get(n, 0)
-        for n, c in count.items():
+        for n, c in count.items(): # 反轉術式
             freq[c].append(n)
         
         res = []
