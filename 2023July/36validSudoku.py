@@ -78,7 +78,7 @@ board4 = [
     [".", ".", ".", "4", "1", "9", ".", ".", "5"],
     [".", ".", ".", ".", "8", ".", "6", ".", "."]
 ]
-print(sudoku.isValidSudoku(board4))  # Output: False
+print(sudoku.isValidSudoku(board4))  # Output: True
 
 board5 = [["5","3",".",".","7",".",".",".","."],
           ["6",".",".","1","9","5",".",".","."],
@@ -90,4 +90,4 @@ board5 = [["5","3",".",".","7",".",".",".","."],
           [".",".",".","4","1","9",".",".","5"],
           [".",".",".",".","8",".",".","7","9"]
 ]
-print(sudoku.isValidSudoku(board5))  # Output: False
+print(sudoku.isValidSudoku(board5))  # Output: True
