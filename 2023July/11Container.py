@@ -22,3 +22,12 @@ solution = Solution()
 
 height1 = [1,8,6,2,5,4,8,3,7]
 print(solution.conatinerWater(height1))
+
+# Brute Force:
+        # res = 0
+
+        # for l in range(len(height)):
+        #     for r in range(len(height)):
+        #          area = (r - l) * min(height[l], height[r])
+        #          res = max(res, area)
+        # return res
