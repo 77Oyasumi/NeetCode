@@ -19,7 +19,7 @@ class Solution:
                     return False
                 rows[r].add(board[r][c])
                 cols[c].add(board[r][c])
-                squares[((r//3, c//3))].add(board[r][c])
+                squares[(r//3, c//3)].add(board[r][c])
         return True
 
 sudoku = Solution()
