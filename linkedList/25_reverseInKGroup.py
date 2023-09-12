@@ -35,3 +35,20 @@ class Solution:
             curr = curr.next
             k -= 1
         return curr
+
+if __name__ == "__main__":
+    # 創建一個測試用的單向鏈表，例如：1 -> 2 -> 3 -> 4 -> 5
+    test_list = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))
+
+    # 創建 Solution 實例
+    solution = Solution()
+
+    # 測試反轉 k 個節點，例如 k = 2
+    k = 2
+    result = solution.reverseKGroup(test_list, k)
+
+    # 打印反轉後的結果，應該是：2 -> 1 -> 4 -> 3 -> 5
+    while result:
+        print(result.val, end=" -> ")
+        result = result.next
+    print("None")
