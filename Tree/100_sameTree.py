@@ -26,7 +26,7 @@ if __name__ == "__main__":
 
     # Test case 3: Trees are different, should return False
     tree1 = TreeNode(1, TreeNode(2), TreeNode(3))
-    tree2 = TreeNode(1, TreeNode(2), TreeNode(4))
+    tree2 = TreeNode(1, TreeNode(2), TreeNode(3))
     result3 = solution.isSameTree(tree1, tree2)
     print("Test case 3:", result3)  # Expected output: False
 
