@@ -24,6 +24,7 @@ class WordDictionary:
                 c = word[i]
                 if c == ".":
                     for child in cur.children.values():
+                        print(f"{child}")
                         if dfs(i+1, child):
                             return True
                     return False
