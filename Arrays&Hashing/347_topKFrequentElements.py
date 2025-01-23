@@ -15,13 +15,31 @@ class Solution:
         
         res = []
 
-        for i in range(len(freq) - 1, 0, -1):
+        for i in range(len(freq) - 1, 0, -1): #為什麼又要-1? 就拿上面3個3的例子 你這樣會有4個[], [0],[1],[2],[3] 所以你len(temp)會是4 但問題是你沒有temp[4]啊 這樣就會index out of range)
             if len(res) < k:
                 res.extend(freq[i])
 
         return res
 
-#        for i in range(len(freq) - 1, 0, -1): #為什麼又要-1? 就拿上面3個3的例子 你這樣會有4個[], [0],[1],[2],[3] 所以你len(temp)會是4 但問題是你沒有temp[4]啊 這樣就會index out of range)
+# Heap
+
+# class Solution:
+#    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+#        count = {}
+#        for num in nums:
+#            count[num] = 1 + count.get(num, 0)
+#
+#        maxHeap = [(-count, num) for num, count in count.items()]
+#        heapq.heapify(maxHeap)
+#
+#        res = []
+#        for _ in range(k):
+#            count, num = heapq.heappop(maxHeap)
+#            res.append(num)
+#
+#        return res
+
+#        for i in range(len(freq) - 1, 0, -1): #上面用extend 這邊用append
 #            for n in freq[i]:
 #                res.append(n)
 #                if len(res) == k:
